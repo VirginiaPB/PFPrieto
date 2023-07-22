@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "components/header";
+@import "pages/mainIndex";
+@import "pages/mainContacto";
+@import "pages/mainNuestrosServicios";
+@import "components/footer";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*GRILLA GENERAL */
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header header header"
+    "main main main main main main main main"
+    "footer footer footer footer footer footer footer footer"
+    ;
+    min-height: 100vh;
+    background-color: #FDF5E6; 
+    background-repeat: repeat;
+    background-color: #D4AF37; 
+    background-image: url('../img/O8WNEJ0.jpg'); 
+    background-repeat: repeat;
+    .bodyContainerIndex{
+        min-height: 100vh;
+    }
+    // *REDONDEAR LOGO RUMBLE
+    .logo-container {
+        .logo {
+            @include sizes(100px, 100px);  
+            border-radius: 50%; 
+            object-fit:fill;
+            padding: 5px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: auto;
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            .logo {
+                @include sizes(80px, 80px); 
+            }
+        }
+    }
+}

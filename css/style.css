@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* *GRILLA GENERAL */
+body {
+  display: grid;
+  grid-template-areas: "header header header header header header header header" "main main main main main main main main" "footer footer footer footer footer footer footer footer";
+  min-height: 100vh;
+  /* grid-template-rows: repeat(25%);
+  grid-template-columns: repeat(25%); */
+}
+
+.bodyContainerIndex {
+  min-height: 100vh;
+}
+
+/* * FORMATO HEADER */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(135deg, #FFD700, #CD8C00);
+  grid-area: header;
+}
+
+header section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+}
+
+header .menuBar .mainMenu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+}
+
+.menuBar .mainMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+/* *FORMATO MAIN */
+main {
+  display: flex;
+  grid-area: main;
+  /* background-color: blueviolet; */
+  background-color: #FDF5E6; /* Color base similar a papel antiguo */
+  background-repeat: repeat;
+  background-color: #D4AF37; /* Goldish color */
+  background-image: url("../img/O8WNEJ0.jpg"); /* Texture image path */
+  background-repeat: repeat;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+main h1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+}
+
+main .videoHildaContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+  margin: 20px;
+  padding: 20px;
+}
+
+main section {
+  margin: 20px;
+  padding: 20px;
+}
+
+.mainIndex .mainContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin: 20px;
+  padding: 20px;
+}
+
+.menuBar .mainMenu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 0;
+}
+
+.menuBar .mainMenu li a {
+  text-decoration: none;
+  font-size: 18px;
+  /* display: block; */
+  color: black;
+  transition: all 0.3s;
+}
+
+.menuBar .mainMenu li a:hover, .menuBar .mainMenu li a.active {
+  color: blueviolet;
+  border-bottom: 2px solid;
+}
+
+.tituloContainer {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* *REDONDEAR EL LOGO DE RUMBLE */
+.logo-container .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: fill;
+  padding: 5px;
+}
+
+/* *FORMATO FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #FFD700, #CD8C00);
+  grid-area: footer;
+}
+
+.logo-container p nav,
+.containerListaFooter .socialMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hiperContacto a {
+  text-decoration: none;
+  font-size: 18px;
+  /* display: block; */
+  color: black;
+  transition: all 0.3s;
+}
+
+.hiperContacto a:hover, .hiperContacto a.active {
+  color: blueviolet;
+  border-bottom: 2px solid;
+}
+
+.containerListaFooter .socialMenu li {
+  margin: 10px;
+}
+
+.logoSocial .loguito {
+  width: 40px;
+  height: 40px;
+  border-radius: 85%;
+  object-fit: fill;
+}
+
+/* .containerListaFooter .socialMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+} */
+/* .logo-container .socialMenu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+  } */
+/* *MEDIA QUERIES - RESPONSIVE FOR MOBILE */
+@media (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vh;
+  }
+  .menuBar .mainMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menuBar .mainMenu li {
+    margin: 10px 0;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .logo-container .logo {
+    width: 80px;
+    height: 80px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main img,
+  main video {
+    max-width: auto;
+    height: auto;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vh;
+  }
+  .containerListaFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .containerListaFooter .socialMenu {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .containerListaFooter .socialMenu li {
+    margin: 5px 0;
+  }
+  .hiperContacto a {
+    font-size: 16px;
+  }
+}
+/* @media (min-width: 320px) and (max-width:480) {
+body {
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+header{
+    align-items: center;
+    grid-area: header;
+}
+main {
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+}
+
+.logo-container .logo {
+    width: 80px;
+    height: 80px;
+}
+
+.menuBar .mainMenu {
+    flex-flow: column;
+}
+
+.menuBar .mainMenu li {
+    margin: 10px;
+}
+
+.hiperContacto a {
+    font-size: 16px;
+}
+
+.containerListaFooter .socialMenu li {
+    margin: 5px;
+}
+
+.logoSocial .loguito {
+    width: 30px;
+    height: 30px;
+}
+} */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,80 @@
+/* *FORMATO FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-header-footer;
+    grid-area: footer;
+    width: 100%;
+    .logo-container p,
+    .hiperContacto{
+        a{
+            text-decoration: none;
+            font-size: 18px;
+            color: $color-ahref;
+            transition: all 0.3s;
+                &:hover,
+                &.active{
+                    color: map-get($hover, color-hover);
+                    border-bottom: map-get($hover, border-hover);
+                }
+            }
+        }
+    .containerListaFooter {
+        .socialMenu{
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            margin: 0; 
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            margin: 10px;
+        }
+        .logoSocial{
+            .loguito {
+                @include sizes(40px, 40px); 
+                border-radius: 85%; 
+                object-fit:fill;
+            }
+            .loguitoWh {
+                @include sizes(55px, 55px); 
+                border-radius: 85%; 
+                object-fit:fill;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    // min-width: 100vh;
+    .logo-container p,
+    .hiperContacto{
+        a {
+        font-size: 16px;
+            }
+        }
+    .containerListaFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        text-align: center;
+        .socialMenu {
+            justify-content: center;
+            margin-top: 10px;
+            li {
+                margin: 5px 0;
+                }
+            }    
+        }   
+    }
+}
+

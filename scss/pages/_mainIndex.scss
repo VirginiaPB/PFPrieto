@@ -1,0 +1,57 @@
+/* *FORMATO MAIN */
+main{
+    @include flex-center;
+    grid-area: main;
+    flex-flow: column;
+    overflow-x: hidden;
+    .mainIndex{
+        @include flex-center;
+        flex-flow: column;
+        width: 100%;
+        margin: 20px;
+        padding: 20px;
+            h1{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-flow: column;
+                } 
+            .videoHildaContainer{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                // flex-flow:wrap;
+                margin: 0px;
+                padding: 20px;
+                @include sizes(100%, 500px);
+                max-width: 900px;
+                // max-height: 560px;
+                .iframeHilda {
+                    @include sizes(100%, 100%);
+                    // max-width: 560px; 
+                    // padding-bottom: 56.25%; 
+                    border: none;
+                    }
+                }
+                section{
+                    margin: 20px;
+                    padding: 20px;
+                    }
+        }
+}
+
+@media (max-width: 400px) {
+    .mainIndex {
+        @include flex-center;
+        flex-direction: column;
+        .videoHildaContainer,
+        #carouselExample{
+            max-width: 560px;
+            width: 100%;
+            padding-bottom: 56.25%; 
+            max-height: 300px;
+        }
+    }
+}
+
+

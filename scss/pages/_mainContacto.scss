@@ -1,0 +1,13 @@
+
+// *CONTACTO PAGE
+.mainContacto{
+    @include flex-center;
+    flex-flow: column;
+    margin: 20px;
+    padding: 20px;
+    .tituloContainer{
+        justify-content:center;
+        align-items: center; 
+        text-align: center; 
+    }
+}

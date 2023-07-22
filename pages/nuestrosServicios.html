@@ -17,6 +17,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -28,7 +29,8 @@
         <p>Rumble Studios</p>
         </section>
         <nav class="menuBar">
-            <ul class="mainMenu">
+            <!-- !ANIMATION -->
+            <ul class="mainMenu animate__animated animate__bounce">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./quienesSomos.html">Quienes Somos</a></li>
                 <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
@@ -37,42 +39,30 @@
             </ul>
         </nav>
     </header>
-    <main class="container-fluid px-0">
+    <main>
         <h1 class="text-center">Nuestros servicios</h1>
-        <section class="cajaServicios">
-            <ul class="list-group listaServicios">
-                <li class="list-group-item">Grabacion</li>
-                <li class="list-group-item">Edicion</li>
-                <li class="list-group-item">Mezcla</li>
-                <li class="list-group-item">Mastering</li>
-                <li class="list-group-item">Filmaciones</li>
-                <li class="list-group-item">Videoclips</li>
-                <li class="list-group-item">Composicion</li>
-                <li class="list-group-item">Arreglos</li>
-                <li class="list-group-item">Direccion y Produccion Musical</li>
-            </ul>
-        </section>
-        <div class="row">
-            <div class="col-md-6">
-                <section class="paquete card">
-                    <div class="paqueteTitulo card-header">Paquete 1</div>
-                    <div class="paqueteParrafo card-body">
+        <!-- *BOOTSTRAP -->
+        <div class="row card-group container-fluid">
+            <div class="col-md-4 text-bg-warning p-3">
+                <section class="paquete card text-bg-warning p-3">
+                    <div class="paqueteTitulo card-header text-bg-warning p-3 card-title text-center h4">Paquete 1</div>
+                    <div class="paqueteParrafo card-body text-bg-warning p-3 text-body-secondary text-center">
                         <p>Grabacion, edicion, mezcla y mastering con una devolucion</p>
                     </div>
                 </section>
             </div>
-            <div class="col-md-6">
-                <section class="paquete card">
-                    <div class="paqueteTitulo card-header">Paquete 2</div>
-                    <div class="paqueteParrafo card-body">
+            <div class="col-md-4 text-bg-warning p-3">
+                <section class="paquete card text-bg-warning p-3">
+                    <div class="paqueteTitulo card-header text-bg-warning p-3 text-center h4">Paquete 2</div>
+                    <div class="paqueteParrafo card-body text-bg-warning p-3 text-body-secondary text-center">
                         <p>Paquete 1 + 2 devoluciones + 20 fotos + 4 videos formato Reel</p>
                     </div>
                 </section>
             </div>
-            <div class="col-md-6">
-                <section class="paquete card">
-                    <div class="paqueteTitulo card-header">Paquete 3</div>
-                    <div class="paqueteParrafo card-body">
+            <div class="col-md-4 text-bg-warning p-3">
+                <section class="paquete card text-bg-warning p-3">
+                    <div class="paqueteTitulo card-header text-bg-warning p-3 text-center h4">Paquete 3</div>
+                    <div class="paqueteParrafo card-body text-bg-warning p-3 text-body-secondary text-center">
                         <p>Paquete 2 + 4 devoluciones +Videoclip de 4 minutos</p>
                     </div>
                 </section>
@@ -87,17 +77,14 @@
         <nav class="hiperContacto">
             <a href="./contacto.html">Contactanos</a>
         </nav>
-        <nav class="hiperContacto">
-            <a href="../pages/contacto.html">Contactanos</a>
-        </nav>
         <nav class="containerListaFooter">
             <ul class="socialMenu logoSocial">
                 <li class="whatsapp">
-                    <a href="https://api.whatsapp.com/send/?phone=541153419395" target="_blank"><img src="../img/logoWhatsapp.png" alt="Whatsapp" class="loguito">
+                    <a href="https://api.whatsapp.com/send/?phone=541153419395" target="_blank"><img src="../img/logoWhatsapp.png" alt="Whatsapp" class="loguitoWh">
                     </a>
                 </li>
                 <li class="instagram">
-                    <a href="https://www.instagram.com/rumble_studios/#" target="_blank"><img src="../img/logoInstagram.jpeg" alt="Instagram" class="loguito">
+                    <a href="https://www.instagram.com/rumble_studios/#" target="_blank"><img src="../img/logoInstagram.png" alt="Instagram" class="loguito">
                     </a>
                 </li>
                 <li class="Youtube">

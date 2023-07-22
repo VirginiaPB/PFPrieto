@@ -17,6 +17,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -27,7 +28,8 @@
                 </div>
                 </section>
                 <nav class="menuBar">
-                    <ul class="mainMenu">
+                    <!-- *ANIMATION -->
+                    <ul class="mainMenu animate__animated animate__bounce">
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./pages/quienesSomos.html">Quienes Somos</a></li>
                         <li><a href="./pages/nuestrosServicios.html">Nuestros Servicios</a></li>
@@ -40,8 +42,12 @@
             <div class="mainIndex">
                 <h1>Rumble Studios</h1>
                 <div class="videoHildaContainer">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/T-BHJ7IjcD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- <div class="embed-responsive embed-responsive-16by9"> -->
+                    <!-- !BOOTSTRAP -->
+                    <!-- <iframe src="https://www.youtube.com/embed/T-BHJ7IjcD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <iframe class="iframeHilda" width="560" height="315"  src="https://www.youtube.com/embed/T-BHJ7IjcD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
+                <!-- </div> -->
                 <section>
                     <div>
                     <!-- !BOOTSTRAP -->
@@ -81,11 +87,11 @@
             <nav class="containerListaFooter">
                 <ul class="socialMenu logoSocial">
                     <li class="whatsapp">
-                        <a href="https://api.whatsapp.com/send/?phone=541153419395" target="_blank"><img src="./img/logoWhatsapp.png" alt="Whatsapp" class="loguito">
+                        <a href="https://api.whatsapp.com/send/?phone=541153419395" target="_blank"><img src="./img/logoWhatsapp.png" alt="Whatsapp" class="loguitoWh">
                         </a>
                     </li>
                     <li class="instagram">
-                        <a href="https://www.instagram.com/rumble_studios/#" target="_blank"><img src="./img/logoInstagram.jpeg" alt="Instagram" class="loguito">
+                        <a href="https://www.instagram.com/rumble_studios/#" target="_blank"><img src="./img/logoInstagram.png" alt="Instagram" class="loguito">
                         </a>
                     </li>
                     <li class="Youtube">
