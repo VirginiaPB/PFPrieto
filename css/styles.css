@@ -1,64 +1,101 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* * FORMATO HEADER */
 @import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: linear-gradient(135deg, #FFD700, #CD8C00);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header header header header header header " "main main main main main main" "footer footer footer footer footer footer";
+  min-height: 90vh;
+  background-color: #FDF5E6;
+  background-repeat: repeat;
+  background-color: #D4AF37;
+  background-image: url("../img/O8WNEJ0.jpg");
+  background-repeat: repeat;
+}
+body header {
   grid-area: header;
   width: 100%;
 }
-header section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+body header nav {
+  grid-area: header;
+  width: 100%;
 }
-header .menuBar .mainMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  list-style: none;
+body header nav .logo-container .logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: fill;
+  padding: 5px;
 }
-header .menuBar .mainMenu li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 20px;
-  padding: 0;
+body main {
+  grid-area: main;
 }
-header .menuBar .mainMenu li a {
-  text-decoration: none;
-  font-size: 18px;
-  /* display: block; */
-  color: black;
-  transition: all 0.3s;
+body footer {
+  grid-area: footer;
 }
-header .menuBar .mainMenu li a:hover, header .menuBar .mainMenu li a.active {
-  color: blueviolet;
-  border-bottom: 2px solid;
+body footer .logo-container .logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: fill;
+  padding: 5px;
 }
 
 @media (max-width: 400px) {
-  header {
+  body {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
-    width: 100%;
+    min-width: auto;
   }
-  header .menuBar .mainMenu {
-    flex-direction: column;
+  body .logo-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
-  header .menuBar .mainMenu li {
-    margin: 10px 0;
+  body .logo-container .logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+    object-fit: fill;
+    padding: 5px;
   }
 }
-/* *FORMATO MAIN */
+.btn-primary {
+  background-color: #CD8C00;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #CD8C00;
+  transform: scale(1.1);
+}
+
+header {
+  width: 100%;
+}
+header .custom-navbar {
+  background: linear-gradient(135deg, #FFD700, #CD8C00);
+  width: 100%;
+  height: 100px;
+}
+header .custom-navbar .container-fluid #navbarNav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  transition: all 0.3s;
+}
+header .custom-navbar .container-fluid #navbarNav ul li a:hover, header .custom-navbar .container-fluid #navbarNav ul li a.active {
+  color: #CD8C00;
+  border-bottom: 2px solid;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -67,6 +104,7 @@ main {
   grid-area: main;
   flex-flow: column;
   overflow-x: hidden;
+  margin-bottom: 16px;
 }
 main .mainIndex {
   display: flex;
@@ -74,9 +112,8 @@ main .mainIndex {
   align-items: center;
   text-align: center;
   flex-flow: column;
-  width: 100%;
-  margin: 20px;
-  padding: 20px;
+  margin: 16px;
+  padding: 16px;
 }
 main .mainIndex h1 {
   display: flex;
@@ -90,7 +127,7 @@ main .mainIndex .videoHildaContainer {
   align-items: center;
   margin: 0px;
   padding: 20px;
-  height: 500px;
+  height: 300px;
   width: 100%;
   max-width: 900px;
 }
@@ -102,6 +139,12 @@ main .mainIndex .videoHildaContainer .iframeHilda {
 main .mainIndex section {
   margin: 20px;
   padding: 20px;
+}
+main .mainIndex section #carouselExample .carousel-inner .carousel-item img {
+  max-height: 250px; /* Ajusta la altura máxima de las imágenes según tus necesidades */
+  width: auto; /* Esto mantendrá la relación de aspecto original de la imagen */
+  object-fit: cover; /* Ajusta cómo se muestra la imagen dentro del contenedor */
+  margin-bottom: 50px;
 }
 
 @media (max-width: 400px) {
@@ -120,26 +163,47 @@ main .mainIndex section {
     max-height: 300px;
   }
 }
-.mainContacto {
-  display: flex;
+.tituloContainer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-flow: column;
-  margin: 20px;
-  padding: 20px;
-}
-.mainContacto .tituloContainer {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  margin-bottom: 90px;
 }
 
-.card-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.mainContacto {
+  display: grid;
+  grid-template-columns: 7fr 5fr; /* Two columns with a 2:1 ratio */
+  grid-gap: 20px;
+  margin: 20px;
+  margin-top: 40px;
+}
+.mainContacto .contactForm {
+  margin-right: 20px; /* Adjust the right margin to move the form to the right */
+  grid-column: 1;
+  min-width: 100%;
+}
+.mainContacto .iMaps {
+  grid-column: 2;
+  min-width: 100% px;
+}
+
+.main-nuestros-servicios .card {
+  background-color: #FFD700;
+  margin-top: 16px;
+}
+
+.main-quienes-somos h1 {
+  margin-bottom: 32px;
+}
+
+.videoD {
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+
+.video-wrapper iframe {
+  width: 500px; /* Ajusta el ancho del iframe al 100% */
+  height: 250px; /* Ajusta la altura del iframe según tus necesidades */
 }
 
 /* *FORMATO FOOTER */
@@ -150,6 +214,10 @@ footer {
   background: linear-gradient(135deg, #FFD700, #CD8C00);
   grid-area: footer;
   width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 footer .logo-container p a,
 footer .hiperContacto a {
@@ -161,7 +229,7 @@ footer .hiperContacto a {
 footer .logo-container p a:hover, footer .logo-container p a.active,
 footer .hiperContacto a:hover,
 footer .hiperContacto a.active {
-  color: blueviolet;
+  color: #CD8C00;
   border-bottom: 2px solid;
 }
 footer .containerListaFooter .socialMenu {
@@ -178,12 +246,6 @@ footer .containerListaFooter li {
 footer .containerListaFooter .logoSocial .loguito {
   height: 40px;
   width: 40px;
-  border-radius: 85%;
-  object-fit: fill;
-}
-footer .containerListaFooter .logoSocial .loguitoWh {
-  height: 55px;
-  width: 55px;
   border-radius: 85%;
   object-fit: fill;
 }
@@ -215,52 +277,10 @@ footer .containerListaFooter .logoSocial .loguitoWh {
     margin: 5px 0;
   }
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-/*GRILLA GENERAL */
-body {
-  display: grid;
-  grid-template-areas: "header header header header header header header header" "main main main main main main main main" "footer footer footer footer footer footer footer footer";
-  min-height: 100vh;
-  background-color: #FDF5E6;
-  background-repeat: repeat;
-  background-color: #D4AF37;
-  background-image: url("../img/O8WNEJ0.jpg");
-  background-repeat: repeat;
-}
-body .bodyContainerIndex {
-  min-height: 100vh;
-}
-body .logo-container .logo {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  object-fit: fill;
-  padding: 5px;
-}
-
-@media (max-width: 400px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: auto;
-  }
-  body .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  body .logo-container .logo {
-    height: 80px;
-    width: 80px;
-  }
+img .whatsapp li a img, .instagram li a img, .Youtube li a img {
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

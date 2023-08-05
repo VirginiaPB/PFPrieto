@@ -1,8 +1,6 @@
-
-@import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
-
-
-.card-group{
-    @include flex-center;
+.main-nuestros-servicios {
+    .card {
+        background-color: $secondary;
+        margin-top: $space-medium;   
+    }   
 }
-

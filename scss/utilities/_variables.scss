@@ -1,9 +1,16 @@
 
-$color-header-footer: linear-gradient(135deg, #FFD700, #CD8C00);
+$primary: #CD8C00;
+$secondary: #FFD700;
+$acent: $primary;
+
+$space-small: 8px;
+$space-medium: 16px;
+$space-large: 32px;
+
+$color-header-footer: linear-gradient(135deg, $secondary, $primary);
 $color-ahref: black;
 // * MAPS GET
 $hover: (
-    color-hover:blueviolet,
+    color-hover: $acent,
     border-hover: 2px solid,
-)
-
+);    

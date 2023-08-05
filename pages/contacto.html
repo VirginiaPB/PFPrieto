@@ -9,60 +9,86 @@
     <!-- !BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
     crossorigin="anonymous">
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <!-- *HEADER -->
     <header>
-        <section>
-        <div class="logo-container"> 
-            <a href="../index.html"><img src="../img/logo.rumble3.jpg" alt="Logo Rumble" class="logo"></a>
-        </div>
-        <p>Rumble Studios</p>
-        </section>
-        <nav class="menuBar">
-            <!-- !ANIMATION -->
-            <ul class="mainMenu animate__animated animate__bounce">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./quienesSomos.html">Quienes Somos</a></li>
-                <li><a href="./nuestrosServicios.html">Nuestros Servicios</a></li>
-                <li><a href="./galeria.html">Galeria</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+        <!-- !BOOTSTRAP -->
+        <nav class="navbar navbar-expand-md navbar-light custom-navbar" style="background: linear-gradient(135deg, #FFD700, #CD8C00);">
+            <a class="navbar-brand logo-container" href="./index.html">
+                <img src="../img/logo.rumble3.png" alt="Logo Rumble Studios" class="logo">
+            </a>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/quienesSomos.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/nuestrosServicios.html">Nuestros Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+    <!-- *MAIN -->
     <main>
-        <div class="mainContacto">
-            <div class="tituloContainer">
-                <h1>Rumble Studios</h1>
-                <h2>Contactanos</h2>
-            </div>
+        <div class="tituloContainer">
+            <h1>Contactanos</h1>
+        </div>
         <!-- !BOOTSTRAP -->
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+        <div class="row">
+            <div class="mainContacto container-fluid">         
+                <div class="contactForm">
+                    <section class="col-md-10">
+                    <!-- <h2>Contactanos</h2> -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </section>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                <div class="iMap">
+                    <section class="col-md-10">
+                        <div class="iMaps mb-5">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.9702562948428!2d-58.38104683034074!3d-34.607169894492706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad02af386d9%3A0x638c24a9fbdb7844!2sBartolom%C3%A9%20Mitre%20989%2C%20C1036AAQ%20CABA!5e0!3m2!1sen!2sar!4v1691168693350!5m2!1sen!2sar" width= 570p; height=300px; style= border:0; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </section>
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+            </div>
         </div>
     </main>
+    <!-- *FOOTER -->
     <footer>
         <div class="logo-container"> 
-            <a href="../index.html"><img src="../img/logo.rumble3.jpg" alt="Logo Rumble" class="logo"></a>
+            <a href="../index.html"><img src="../img/logo.rumble3.png" alt="Logo Rumble Studios" class="logo"></a>
         </div>
         <p>rumblestudios@gmail.com</p>
         <nav class="hiperContacto">
@@ -71,19 +97,23 @@
         <nav class="containerListaFooter">
             <ul class="socialMenu logoSocial">
                 <li class="whatsapp">
-                    <a href="https://api.whatsapp.com/send/?phone=541153419395" target="_blank"><img src="../img/logoWhatsapp.png" alt="Whatsapp" class="loguitoWh">
+                    <a href="https://api.whatsapp.com/send/?phone=541153419395" target="_blank"><img src="../img/logoWhatsapp.png" alt="Whatsapp link" class="loguito">
                     </a>
                 </li>
                 <li class="instagram">
-                    <a href="https://www.instagram.com/rumble_studios/#" target="_blank"><img src="../img/logoInstagram.png" alt="Instagram" class="loguito">
+                    <a href="https://www.instagram.com/rumble_studios/#" target="_blank"><img src="../img/logoInstagram.png" alt="Instagram link" class="loguito">
                     </a>
                 </li>
                 <li class="Youtube">
-                    <a href="https://www.youtube.com/@RumbleStudios" target="_blank"><img src="../img/logoYoutube.png" alt="Youtube" class="loguito">
+                    <a href="https://www.youtube.com/@RumbleStudios" target="_blank"><img src="../img/logoYoutube.png" alt="Youtube link" class="loguito">
                     </a>
                 </li>
             </ul>
         </nav>
-    </footer>    
+    </footer>   
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script> 
 </body>
 </html>
